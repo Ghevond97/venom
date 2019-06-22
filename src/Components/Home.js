@@ -21,7 +21,8 @@ class Home extends Component {
     return (
       <>
         <NavBar />
-        <div className="back-image">
+        <div className="back-image" style={{display: 'flex', justifyContent: 'center'}}>
+        <h1 style={{color: 'white', position: 'absolute', marginTop: '10%', zIndex: 4, fontSize: 90, textAlign: 'center'}}>Venom</h1>
           <img
             src={img1}
             alt=""
