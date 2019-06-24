@@ -5,12 +5,14 @@ import React from 'react';
 import logo from './logo.svg';
 // import './App.css';
 import Home from './Components/Home';
+import AnimalVenom from './Components/AnimalVenom';
 
 
 
 function App() {
   return (
-    <Home />    
+    // <Home />   
+    <AnimalVenom /> 
   );
 }
 

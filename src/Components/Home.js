@@ -17,6 +17,26 @@ import emailIcon from './mail.png';
 import locationIcon from './locationPin.png';
 import './Home.scss';
 class Home extends Component {
+
+  componentDidMount() {
+    this.getVenomCategories();
+  }
+
+  getVenomCategories = () => {
+    const url = 'https://admin.armvenomprod.com/api/venom-categories';
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        // this.setState({
+        //   fullData: data,
+        //   dailyData: dailyData,
+        //   hourlyData: hourlyData,
+        //   axisData: axisData,
+        //   minMaxData: minMaxData,
+        // });
+      });
+  }
   render() {
     return (
       <>
@@ -143,7 +163,6 @@ class Home extends Component {
                     Snake
                   </span>
                 </div>
-                s{' '}
               </div>
               <div>
                 <div
@@ -199,21 +218,21 @@ class Home extends Component {
             </div>
           </div>
         </section>
-        <section style={{display:'flex', flexDirection:'row', justifyContent: 'center', paddingBottom: '5%' }}>
-          <div style={{display:'flex', flexDirection:'column', justifyContent: "space-evenly", paddingRight: '10%'}}>
-            <div style={{display:'flex', flexDirection: 'row', alignItems: 'center'}}>
-              <img src={locationIcon} style={{width: 50, height: 50}} />
-              <h2 style={{color:'#555c60', paddingLeft: '5%'}}>Baghramyan 1</h2>
-            </div>
-            <div style={{display:'flex', flexDirection: 'row', alignItems: 'center'}}>
-              <img src={phoneIcon} style={{width: 50, height: 50}}/>
-              <h2 style={{color:'#555c60', paddingLeft: '5%'}}>+37498888888</h2>
-            </div>
-            <div style={{display:'flex' , flexDirection: 'row', alignItems: 'center'}}>
-              <img src={emailIcon} style={{width: 50, height: 50}}/>
-              <h2 style={{color:'#555c60', paddingLeft: '5%'}}>venom@gmail.com</h2>
-            </div>
-          </div>
+        <section style={{display:'flex', flexDirection:'column', justifyContent: 'center', paddingBottom: '5%', alignItems: 'center' }}>
+        <h2
+            style={{
+              color: '#555c60',
+              fontWeight: 100,
+              paddingTop: 32,
+              fontSize: 50,
+              textAlign: 'center',
+              fontFamily: 'roboto',
+              letterSpacing: 4,
+            }}
+          >
+            Contact Us
+          </h2>
+          <div style={{display:'flex', flexDirection:'row', justifyContent: 'center', paddingBottom: '5%', alignItems: 'center' }}>
           <div style={{display:'flex', flexDirection:'column' }}>
             <MDBInput label="Your Name" outline size="lg" />
             <MDBInput label="Your Email" outline size="lg" />
@@ -229,10 +248,27 @@ class Home extends Component {
             </div>
           <MDBBtn color="blue-grey">Submit Message</MDBBtn>
           </div>
+          </div>
+          
         </section>
         <section>
-          <div style={{ paddingTop: '5%', height: 200, width: '100%', backgroundColor: '#03548a', bottom: 0}}></div>
-        </section>
+            <div style={{ paddingTop: '1%', alignItems: 'center', minHeight: 200, width: '100%', backgroundColor: '#03548a', bottom: 0, display: 'flex', justifyContent:'center'}}>
+            <div style={{display:'flex', flexDirection:'row', justifyContent: "space-evenly", width: '100%'}}>
+              <div style={{display:'flex', flexDirection: 'row', alignItems: 'center'}}>
+                <img src={locationIcon} style={{width: 30, height: 30}} />
+                <h3 style={{color:'white', paddingLeft: '5%',  whiteSpace: 'nowrap', overflow: 'hidden'}}>Baghramyan 1</h3>
+              </div>
+              <div style={{display:'flex', flexDirection: 'row', alignItems: 'center'}}>
+                <img src={phoneIcon} style={{width: 30, height: 30}}/>
+                <h3 style={{color:'white', paddingLeft: '5%'}}>+37498888888</h3>
+              </div>
+              <div style={{display:'flex' , flexDirection: 'row', alignItems: 'center'}}>
+                <img src={emailIcon} style={{width: 30, height: 30}}/>
+                <h3 style={{color:'white', paddingLeft: '5%'}}>venom@gmail.com</h3>
+              </div>
+            </div>
+            </div>
+          </section>
         {/* <Img1 /> */}
       </>
 
