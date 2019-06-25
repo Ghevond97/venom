@@ -10,7 +10,6 @@ import {
   MDBIcon,
   MDBView,
 } from 'mdbreact';
-import section2snake2 from './section2snake2.png';
 import phoneIcon from './phone.png';
 import emailIcon from './mail.png';
 import locationIcon from './locationPin.png';
@@ -72,6 +71,7 @@ class AnimalVenom extends Component {
           >
             <div></div>
             <div
+            className="section1"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -438,9 +438,8 @@ class AnimalVenom extends Component {
                     </MDBCard>
                   );
                 })
-              : 'FUVK'}
+              : ''}
           </section>
-          -----------------------------------------------------------------
           <section>
             <div
               className="footer-container"
