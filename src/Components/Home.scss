@@ -1,3 +1,185 @@
 body {
   font-family: 'Roboto';
 }
+
+.back-image-container {
+  display: flex;
+  justify-content: center;
+  h1 {
+    color: white;
+    position: absolute;
+    margin-top: 10%;
+    z-index: 4;
+    font-size: 90px;
+    text-align: center;
+  }
+  .back-image {
+    max-height: 500px;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+  }
+
+  @media (max-width: 651px) {
+    h1 {
+      margin-top: 15%;
+      font-size: 70px; 
+    }
+    .back-image {
+      max-height: 300px;
+    }
+  }
+}
+
+.about-us-container {
+  padding-top: 4%;
+  @media (min-width:952px) {
+    padding-left: 140px;  
+  }
+  h2 {
+    font-size: 77px;
+    color: #03548a;
+    font-weight: lighter;
+  }
+
+  .about-us-text {
+    display: flex;
+    flex-direction: row;
+    p {
+      font-size: 25px;
+      color: #03548a;
+      font-weight: lighter;
+    }
+  }
+
+  .about-us-image {
+    max-width: 400px;
+    max-height: 310px;
+  }
+
+  @media (max-width: 951px) {
+   .about-us-container {
+    padding-left: 0 !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about-us-text {
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0 3% 0 3%;
+}
+h2 {
+  text-align: center;
+}
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 55px
+  }
+  .about-us-image {
+    max-width: 300px;
+  }
+}
+}
+
+.venoms-container {
+  background-color: #03548a;
+  padding-top: 2%; 
+  h2 {
+    color: white;
+    font-weight: 100px;
+    padding-top: 32px;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+  .categories-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .section-1-image-1 {
+    max-height: 353px;
+    max-width: 335px;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  .section-1-image-4 {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  .venom-categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+    @media (max-width: 510px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 1261px) {
+    .venom-categories {
+      width: 600px;
+    }
+    .section-1-image-1 {
+      max-width: 300px;
+      max-height: 300px;
+    }
+    .section-1-image-4 {
+      max-width: 300px;
+      max-height: 300px; 
+    }
+  }
+
+  @media (max-width: 1177px) {
+    .section-1-image-1 {
+      max-width: 250px;
+      max-height: 250px;
+    }
+    .section-1-image-4 {
+      width: 250px;
+      height: 250px; 
+    }
+  }
+
+  @media (max-width: 976px) {
+    .section-1-image-1 {
+    display: none;
+    }
+    .section-1-image-4 {
+      display: none;
+    }
+  }
+
+}
+
+.footer-container {
+  padding-top: 1%;
+  align-items: center;
+  min-height: 200;
+  width: 100%;
+  background-color: #03548a;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+@media (max-width: 750px) {
+  .footer-items {
+    flex-direction: column;
+    align-items: end;
+    width: max-content;
+  }
+}

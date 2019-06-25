@@ -1,0 +1,8 @@
+.big-card-container {
+  max-width: 40%;
+  min-width: 40%;
+  @media (max-width: 992px) {
+    max-width: 100%;
+    min-width: 70%
+  }
+}
